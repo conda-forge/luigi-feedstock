@@ -1,6 +1,6 @@
 {% set name = "luigi" %}
-{% set version = "2.1.1" %}
-{% set md5 = "f05aab98f4212d807b5ab348239058ec" %}
+{% set version = "2.2.0" %}
+{% set md5 = "9e304df7d11dc54b5cc702ccd59f0012" %}
 {% set build = 0 %}
 
 package:
