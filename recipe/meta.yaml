@@ -1,6 +1,6 @@
 {% set name = "luigi" %}
-{% set version = "2.3.0" %}
-{% set md5 = "3b7e0b4c8d684a168c97a4fb2d9340ca" %}
+{% set version = "2.3.1" %}
+{% set md5 = "e48786e9ac71d8fd58694529d3f5539d" %}
 {% set build = 0 %}
 
 package:
@@ -28,6 +28,7 @@ requirements:
         - setuptools
     run:
         - python
+        - setuptools
         - pyparsing
         - tornado
         - python-daemon
@@ -38,6 +39,7 @@ test:
         - luigi.contrib
         - luigi.contrib.hdfs
         - luigi.tools
+        - luigi.scheduler
 
     commands:
         - luigid --help
