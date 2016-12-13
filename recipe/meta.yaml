@@ -4,52 +4,52 @@
 {% set build = 0 %}
 
 package:
-    name: {{ name }}
-    version: {{ version }}
+  name: {{ name }}
+  version: {{ version }}
 
 source:
-    fn: {{ name }}-{{ version }}.tar.gz
-    url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-    sha256: {{ sha256 }}
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
 
 build:
-    number: {{ build }}
-    script: python setup.py install --single-version-externally-managed --record record.txt
-    entry_points:
-        - luigi = luigi.cmdline:luigi_run
-        - luigid = luigi.cmdline:luigid
-        - luigi-grep = luigi.tools.luigi_grep:main
-        - luigi-deps = luigi.tools.deps:main
+  number: {{ build }}
+  script: python setup.py install --single-version-externally-managed --record record.txt
+  entry_points:
+    - luigi = luigi.cmdline:luigi_run
+    - luigid = luigi.cmdline:luigid
+    - luigi-grep = luigi.tools.luigi_grep:main
+    - luigi-deps = luigi.tools.deps:main
 
 requirements:
-    build:
-        - python
-        - setuptools
-    run:
-        - python
-        - setuptools
-        - pyparsing
-        - tornado
-        - python-daemon  # [not win]
+  build:
+    - python
+    - setuptools
+  run:
+    - python
+    - setuptools
+    - pyparsing
+    - tornado
+    - python-daemon  # [not win]
 
 test:
-    imports:
-        - luigi
-        - luigi.contrib
-        - luigi.contrib.hdfs
-        - luigi.tools
-        - luigi.scheduler
-
-    commands:
-        - luigid --help
-        - luigi-grep --help
+  imports:
+    - luigi
+    - luigi.contrib
+    - luigi.contrib.hdfs
+    - luigi.tools
+    - luigi.scheduler
+  commands:
+    - luigid --help
+    - luigi-grep --help
 
 about:
-    home: https://github.com/spotify/luigi
-    license: Apache-2.0
-    summary: Workflow mgmgt + task scheduling + dependency resolution
+  home: https://github.com/spotify/luigi
+  license: Apache-2.0
+  license_file: LICENSE
+  summary: 'Workflow mgmgt + task scheduling + dependency resolution.'
 
 extra:
-    recipe-maintainers:
-        - ocefpaf
-        - kwilcox
+  recipe-maintainers:
+    - ocefpaf
+    - kwilcox
