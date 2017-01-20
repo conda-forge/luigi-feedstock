@@ -1,6 +1,6 @@
 {% set name = "luigi" %}
-{% set version = "2.4.0" %}
-{% set sha256 = "5c63d960c5219346acf29b925f5de7585427555a863b5f9e27fa19611f2d8382" %}
+{% set version = "2.5.0" %}
+{% set sha256 = "fb0dbef787d2572f98c4a8d25c993731c8805d67919c79496fde7cab1cefdf26" %}
 {% set build = 0 %}
 
 package:
@@ -29,8 +29,8 @@ requirements:
     - python
     - setuptools
     - pyparsing
-    - tornado
-    - python-daemon  # [not win]
+    - tornado >=4.0,<5
+    - python-daemon <3.0  # [not win]
 
 test:
   imports:
