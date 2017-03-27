@@ -1,6 +1,6 @@
 {% set name = "luigi" %}
-{% set version = "2.6.0" %}
-{% set sha256 = "b308aaabab87473cbf0253c715144431476d8deb76bf7708a9850225c81bf0ef" %}
+{% set version = "2.6.1" %}
+{% set sha256 = "4b60d7d6556086680ffcfdb8b7ffec97a8a46bbc4ccd2d47523082a25ccc1b1b" %}
 {% set build = 0 %}
 
 package:
@@ -13,7 +13,6 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  skip: True  # [py36]
   number: {{ build }}
   script: python setup.py install --single-version-externally-managed --record record.txt
   entry_points:
