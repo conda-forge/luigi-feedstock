@@ -20,7 +20,6 @@ build:
     - luigid = luigi.cmdline:luigid
     - luigi-grep = luigi.tools.luigi_grep:main
     - luigi-deps = luigi.tools.deps:main
-    - luigi-migrate = luigi.tools.migrate:main
 
 requirements:
   build:
@@ -45,7 +44,6 @@ test:
     - luigid --help
     - luigi-grep --help
     - luigi-deps --help
-    - luigi-migrate --help
 
 about:
   home: https://github.com/spotify/luigi
@@ -53,6 +51,8 @@ about:
   license: Apache-2.0
   license_family: Apache
   summary: 'Workflow mgmgt + task scheduling + dependency resolution.'
+  dev_url: https://github.com/spotify/luigi
+  doc_url: https://luigi.readthedocs.io/en/stable/
 
 extra:
   recipe-maintainers:
