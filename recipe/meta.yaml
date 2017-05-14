@@ -1,6 +1,6 @@
 {% set name = "luigi" %}
-{% set version = "2.6.1" %}
-{% set sha256 = "4b60d7d6556086680ffcfdb8b7ffec97a8a46bbc4ccd2d47523082a25ccc1b1b" %}
+{% set version = "2.1.0" %}
+{% set sha256 = "98e3806afae88b8c2cc90ecd621f610c5a67f96aa7d6b5fee1d38f0cc6e499ac" %}
 {% set build = 0 %}
 
 package:
@@ -40,14 +40,19 @@ test:
     - luigi.tools
     - luigi.scheduler
   commands:
+    - luigi --help
     - luigid --help
     - luigi-grep --help
+    - luigi-deps --help
 
 about:
   home: https://github.com/spotify/luigi
-  license: Apache-2.0
   license_file: LICENSE
+  license: Apache-2.0
+  license_family: Apache
   summary: 'Workflow mgmgt + task scheduling + dependency resolution.'
+  dev_url: https://github.com/spotify/luigi
+  doc_url: https://luigi.readthedocs.io/en/stable/
 
 extra:
   recipe-maintainers:
