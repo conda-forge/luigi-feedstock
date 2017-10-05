@@ -1,6 +1,6 @@
 {% set name = "luigi" %}
-{% set version = "2.7.0" %}
-{% set sha256 = "3c9f3127671324c22db10516dc2a873ca458dfe0c0fb2e295f875e0b343c028a" %}
+{% set version = "2.7.1" %}
+{% set sha256 = "6d0ad7cb83f0774a72f2840aa58205f06eab2cfed746e94900a224006feab7b7" %}
 {% set build = 0 %}
 
 package:
@@ -9,7 +9,7 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://github.com/spotify/{{ name }}/archive/{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
