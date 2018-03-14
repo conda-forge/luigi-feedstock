@@ -12,7 +12,7 @@ source:
 
 build:
   number: 0
-  script: script: python -m pip install --no-deps --ignore-installed .
+  script: python -m pip install --no-deps --ignore-installed .
   entry_points:
     - luigi = luigi.cmdline:luigi_run
     - luigid = luigi.cmdline:luigid
