@@ -1,20 +1,18 @@
 {% set name = "luigi" %}
-{% set version = "2.7.2" %}
-{% set sha256 = "ae97b9225f674957661b3b2a8c55c045bf948d705f805b88bbdee64ce39282ec" %}
-{% set build = 0 %}
+{% set version = "2.7.3" %}
+{% set sha256 = "d557ef8fa5212772064f8642642e684e1c75b4b4a74d12f71d9aedb48ae76264" %}
 
 package:
   name: {{ name }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/spotify/{{ name }}/archive/{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: {{ build }}
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  number: 0
+  script: python -m pip install --no-deps --ignore-installed .
   entry_points:
     - luigi = luigi.cmdline:luigi_run
     - luigid = luigi.cmdline:luigid
@@ -24,7 +22,7 @@ build:
 requirements:
   build:
     - python
-    - setuptools
+    - pip
   run:
     - python
     - setuptools
