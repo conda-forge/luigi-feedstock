@@ -14,14 +14,16 @@ Summary: Workflow mgmgt + task scheduling + dependency resolution.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/luigi-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/luigi-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/luigi-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/luigi-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/luigi-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/luigi-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/luigi-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/luigi-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/luigi-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/luigi-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/luigi-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/luigi-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/luigi/badges/version.svg)](https://anaconda.org/conda-forge/luigi)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/luigi/badges/downloads.svg)](https://anaconda.org/conda-forge/luigi)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-luigi-green.svg)](https://anaconda.org/conda-forge/luigi) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/luigi.svg)](https://anaconda.org/conda-forge/luigi) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/luigi.svg)](https://anaconda.org/conda-forge/luigi) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/luigi.svg)](https://anaconda.org/conda-forge/luigi) |
 
 Installing luigi
 ================
