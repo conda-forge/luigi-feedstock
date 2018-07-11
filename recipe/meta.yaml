@@ -29,6 +29,7 @@ requirements:
     - pyparsing
     - tornado >=4.0,<5
     - python-daemon <3.0  # [not win]
+    - botocore
 
 test:
   imports:
