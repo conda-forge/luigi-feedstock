@@ -1,6 +1,6 @@
 {% set name = "luigi" %}
-{% set version = "2.7.5" %}
-{% set sha256 = "bbfb941254c2f9fe66b14a95d0548958ca848723d29cd4edc928e5341c042646" %}
+{% set version = "2.7.6" %}
+{% set sha256 = "e0b04c0dd98e845d7bb8bb2148164ce5a3d20fbfb99c5cbbfaecb4bd3fbf7843" %}
 
 package:
   name: {{ name }}
@@ -29,6 +29,7 @@ requirements:
     - pyparsing
     - tornado >=4.0,<5
     - python-daemon <3.0  # [not win]
+    - botocore
 
 test:
   imports:
