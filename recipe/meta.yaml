@@ -1,18 +1,16 @@
-{% set name = "luigi" %}
-{% set version = "2.7.6" %}
-{% set sha256 = "e0b04c0dd98e845d7bb8bb2148164ce5a3d20fbfb99c5cbbfaecb4bd3fbf7843" %}
+{% set version = "2.7.8" %}
 
 package:
-  name: {{ name }}
+  name: luigi
   version: {{ version }}
 
 source:
-  url: https://github.com/spotify/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://github.com/spotify/luigi/archive/{{ version }}.tar.gz
+  sha256: d0117738c83824f12ddd3dfe5b62ab6fec2de22c1f517fbe3a51689bbd5d0a35
 
 build:
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
   entry_points:
     - luigi = luigi.cmdline:luigi_run
     - luigid = luigi.cmdline:luigid
@@ -26,9 +24,9 @@ requirements:
   run:
     - python
     - setuptools
-    - pyparsing
     - tornado >=4.0,<5
     - python-daemon <3.0  # [not win]
+    - enum34  # [py<34]
     - botocore
 
 test:
