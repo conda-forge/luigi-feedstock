@@ -27,6 +27,7 @@ requirements:
     - tornado >=4.0,<5
     - python-daemon <3.0  # [not win]
     - enum34  # [py<34]
+    - botocore
 
 test:
   imports:
