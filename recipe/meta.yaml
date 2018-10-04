@@ -18,7 +18,7 @@ build:
     - luigi-deps = luigi.tools.deps:main
 
 requirements:
-  build:
+  host:
     - python
     - pip
   run:
