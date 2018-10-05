@@ -9,7 +9,7 @@ source:
   sha256: 078d94cb5771505c493ce4f53c2079ba8c4f71c9083bd76d046e51431ec55695
 
 build:
-  number: 0
+  number: 1000
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
   entry_points:
     - luigi = luigi.cmdline:luigi_run
@@ -18,7 +18,7 @@ build:
     - luigi-deps = luigi.tools.deps:main
 
 requirements:
-  build:
+  host:
     - python
     - pip
   run:
