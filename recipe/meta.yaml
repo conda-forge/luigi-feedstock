@@ -1,4 +1,4 @@
-{% set version = "2.7.9" %}
+{% set version = "2.8.0" %}
 
 package:
   name: luigi
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/spotify/luigi/archive/{{ version }}.tar.gz
-  sha256: 078d94cb5771505c493ce4f53c2079ba8c4f71c9083bd76d046e51431ec55695
+  sha256: 5231b49a698080ecb00af4b4385a112089545b3a935752d9a84972756cf104f0
 
 build:
   number: 1000
