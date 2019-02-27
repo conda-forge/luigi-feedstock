@@ -9,8 +9,8 @@ source:
   sha256: 5997ac3f77f7a6ebbe275d15166b8501b2c1d72ddfbbb2b91479a9dee03118c4
 
 build:
-  number: 1000
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  number: 1
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   entry_points:
     - luigi = luigi.cmdline:luigi_run
     - luigid = luigi.cmdline:luigid
@@ -25,9 +25,9 @@ requirements:
     - python
     - setuptools
     - tornado >=4.0,<5
-    - python-daemon <3.0  # [not win]
+    - python-daemon <2.2.0  # [not win]
+    - python-dateutil==2.7.5
     - enum34  # [py<34]
-    - botocore
 
 test:
   imports:
