@@ -1,4 +1,4 @@
-{% set version = "2.8.8" %}
+{% set version = "2.8.9" %}
 
 package:
   name: luigi
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/spotify/luigi/archive/{{ version }}.tar.gz
-  sha256: b3fb1321020e6e44a3f52b70e201b88391f5a56b59849dd29960ec2b94be9285
+  sha256: eb58933ca870ff90dcd0b9fc89b14286370b6ffefd677138b3b2b9c4a4bfa897
 
 build:
   number: 0
@@ -24,7 +24,7 @@ requirements:
   run:
     - python
     - setuptools
-    - tornado >=4.0,<5
+    - tornado >=4.0,<6
     - python-daemon <2.2.0  # [not win]
     - python-dateutil >=2.7.5,<3
     - enum34  # [py<34]
