@@ -9,7 +9,7 @@ source:
   sha256: eb58933ca870ff90dcd0b9fc89b14286370b6ffefd677138b3b2b9c4a4bfa897
 
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   entry_points:
     - luigi = luigi.cmdline:luigi_run
@@ -25,7 +25,7 @@ requirements:
     - python
     - setuptools
     - tornado >=4.0,<6
-    - python-daemon <2.2.0  # [not win]
+    - python-daemon <2.2.0
     - python-dateutil >=2.7.5,<3
     - enum34  # [py<34]
     - prometheus_client ==0.5.0
