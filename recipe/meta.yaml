@@ -32,6 +32,8 @@ requirements:
     - toml <2.0.0
 
 test:
+  requires:
+    - pip
   imports:
     - luigi
     - luigi.contrib
@@ -43,6 +45,7 @@ test:
     - luigid --help
     - luigi-grep --help
     - luigi-deps --help
+    - pip check
 
 about:
   home: https://github.com/spotify/luigi
