@@ -25,7 +25,8 @@ requirements:
     - python
     - setuptools
     - tornado >=4.0,<6
-    - python-daemon <2.2.0  # [win]
+    # cf doesn't have this package to satisfy this dependency on win
+    # - python-daemon <2.2.0  # [win]
     - python-daemon  # [not win]
     - python-dateutil >=2.7.5,<3
     - enum34 >1.1.0  # [py<34]
