@@ -1,4 +1,4 @@
-{% set version = "2.8.12" %}
+{% set version = "2.8.13" %}
 
 package:
   name: luigi
@@ -6,11 +6,11 @@ package:
 
 source:
   url: https://github.com/spotify/luigi/archive/{{ version }}.tar.gz
-  sha256: 02d7af97d5254bc7f04f1070f3ac2e8bba559ca11e73f252a37bef3d2fbd1483
+  sha256: 5ac9991e47476c9ee284b3a02c3b4f39a1c8b04bceaee55d7271b0bfa6a1662a
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - luigi = luigi.cmdline:luigi_run
     - luigid = luigi.cmdline:luigid
@@ -54,7 +54,7 @@ about:
   license_file: LICENSE
   license: Apache-2.0
   license_family: Apache
-  summary: 'Workflow mgmgt + task scheduling + dependency resolution.'
+  summary: Workflow mgmgt + task scheduling + dependency resolution.
   dev_url: https://github.com/spotify/luigi
   doc_url: https://luigi.readthedocs.io/en/stable/
 
