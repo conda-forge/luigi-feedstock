@@ -9,7 +9,7 @@ source:
   sha256: 22d7c336d04711a3bc5a8a47f261d331a747206502bba4ca58312518ca7ef049
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - luigi = luigi.cmdline:luigi_run
@@ -24,7 +24,7 @@ requirements:
   run:
     - python
     - setuptools
-    - tornado >=4.0,<6
+    - tornado >=4.0,<7
     # cf doesn't have this package to satisfy this dependency on win
     # - python-daemon <2.2.0  # [win]
     - python-daemon  # [not win]
