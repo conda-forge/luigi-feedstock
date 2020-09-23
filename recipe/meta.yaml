@@ -16,6 +16,7 @@ build:
     - luigid = luigi.cmdline:luigid
     - luigi-grep = luigi.tools.luigi_grep:main
     - luigi-deps = luigi.tools.deps:main
+    - luigi-deps-tree = luigi.tools.deps_tree:main
 
 requirements:
   host:
@@ -24,7 +25,7 @@ requirements:
   run:
     - python
     - setuptools
-    - tornado >=4.0,<6
+    - tornado >=5.0,<7
     # cf doesn't have this package to satisfy this dependency on win
     # - python-daemon <2.2.0  # [win]
     - python-daemon  # [not win]
