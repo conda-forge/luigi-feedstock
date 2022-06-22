@@ -1,4 +1,4 @@
-{% set version = "3.0.3" %}
+{% set version = "3.1.0" %}
 
 package:
   name: luigi
@@ -6,10 +6,11 @@ package:
 
 source:
   url: https://github.com/spotify/luigi/archive/{{ version }}.tar.gz
-  sha256: 473960e9a213ef5693c75351929f19b8dbe427e13026c298a8ff155d74ac6751
+  sha256: f78548cdc2e8b07ca6b97d9d1feafd3e003f5b028e2c58171d23f8ec8eb78e8b
 
 build:
-  number: 2
+  number: 0
+  skip: True  # [py<36]
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - luigi = luigi.cmdline:luigi_run
@@ -29,14 +30,14 @@ requirements:
     - python
     - setuptools
     - tornado >=5.0,<7
+    - python-dateutil >=2.7.5,<3
+    - tenacity >=8,<9
+    # extras
+    - prometheus_client ==0.5.0
+    - toml <2.0.0
     # cf doesn't have this package to satisfy this dependency on win
     # - python-daemon <2.2.0  # [win]
     - python-daemon  # [not win]
-    - python-dateutil >=2.7.5,<3
-    - tenacity >=6.3.0,<7
-    - enum34 >1.1.0  # [py<34]
-    - prometheus_client ==0.5.0
-    - toml <2.0.0
 
 test:
   requires:
