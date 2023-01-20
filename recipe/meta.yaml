@@ -1,4 +1,4 @@
-{% set version = "3.1.1" %}
+{% set version = "3.2.0" %}
 
 package:
   name: luigi
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/spotify/luigi/archive/{{ version }}.tar.gz
-  sha256: 1c19756ec7a4e4ba32a5e8f78aa52e2f390ca27a485c339af5a141d7e661341e
+  sha256: c8e48d48338f73fd1071654988cdc1725fc13b6b9b9c2f7532241e11994a420b
 
 build:
-  number: 1
+  number: 0
   skip: true  # [py<36]
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
