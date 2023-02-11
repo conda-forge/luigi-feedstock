@@ -40,8 +40,6 @@ requirements:
     # - python-daemon <2.2.0  # [win]
     - python-daemon  # [not win]
 
-
-
 test:
   requires:
     - pip
