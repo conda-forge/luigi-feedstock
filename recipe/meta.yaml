@@ -9,7 +9,7 @@ source:
   sha256: c8e48d48338f73fd1071654988cdc1725fc13b6b9b9c2f7532241e11994a420b
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py<36]
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
@@ -33,7 +33,8 @@ requirements:
     - python-dateutil >=2.7.5,<3
     - tenacity >=8,<9
     # extras
-    - prometheus_client ==0.5.0
+    - jsonschema
+    - prometheus_client >=0.5.0,<0.15
     - toml <2.0.0
     # cf doesn't have this package to satisfy this dependency on win
     # - python-daemon <2.2.0  # [win]
