@@ -9,7 +9,7 @@ source:
   sha256: d0940cd38e0767867db0e769c69d6e4a805ad8085d0e9e4a50ff3a1dff8f8c96
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py<36]
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
@@ -25,6 +25,7 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
     - python
+    - setuptools
     - pip
   run:
     - python
