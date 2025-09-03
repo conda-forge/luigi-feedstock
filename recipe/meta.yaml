@@ -9,7 +9,7 @@ source:
   sha256: ef389b67457e3f887252ab09d4ce21efb994239a4689b7daf1be1e7847b0d858
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   entry_points:
     - luigi = luigi.cmdline:luigi_run
