@@ -1,4 +1,4 @@
-{% set version = "3.6.0" %}
+{% set version = "3.7.2" %}
 
 package:
   name: luigi
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/spotify/luigi/archive/v{{ version }}.tar.gz
-  sha256: ef389b67457e3f887252ab09d4ce21efb994239a4689b7daf1be1e7847b0d858
+  sha256: 8e6610e69befa0d39caa11c069e26c70f1cd2715b3b142f012a608652c404be5
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   entry_points:
     - luigi = luigi.cmdline:luigi_run
@@ -27,6 +27,7 @@ requirements:
     - setuptools
     - pip
   run:
+    - typing_extensions >=4.12.2
     - python
     - setuptools
     - tornado >=5.0,<7
