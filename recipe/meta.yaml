@@ -24,7 +24,7 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
     - python
-    - setuptools
+    - hatchling
     - pip
   run:
     - typing_extensions >=4.12.2
