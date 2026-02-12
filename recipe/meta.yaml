@@ -1,4 +1,4 @@
-{% set version = "3.7.2" %}
+{% set version = "3.7.3" %}
 
 package:
   name: luigi
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/spotify/luigi/archive/v{{ version }}.tar.gz
-  sha256: 8e6610e69befa0d39caa11c069e26c70f1cd2715b3b142f012a608652c404be5
+  sha256: 5f608535b7a9fc3b561971669f44cf185b6cadb1c6cb54e04c55c8535923bec7
 
 build:
   number: 0
@@ -41,7 +41,7 @@ requirements:
     - toml <2.0.0
     # cf doesn't have this package to satisfy this dependency on win
     # - python-daemon <2.2.0  # [win]
-    - python-daemon  # [not win]
+    - python-daemon <2.2.0 # [not win]
 
 test:
   requires:
