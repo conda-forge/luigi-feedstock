@@ -1,0 +1,68 @@
+schema_version: 1
+
+context:
+  version: "3.8.0"
+
+package:
+  name: luigi
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/l/luigi/luigi-${{ version }}.tar.gz
+  sha256: e77c37e7d8ed0b85d5da2daeae3b3f0e89c03993ff28698795f17634f1d5ac75
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  python:
+    entry_points:
+      - luigi = luigi.cmdline:luigi_run
+      - luigid = luigi.cmdline:luigid
+      - luigi-grep = luigi.tools.luigi_grep:main
+      - luigi-deps = luigi.tools.deps:main
+      - luigi-deps-tree = luigi.tools.deps_tree:main
+
+requirements:
+  host:
+    - python  ${{ python_min }}.*
+    - hatchling
+    - hatch-fancy-pypi-readme
+    - pip
+  run:
+    - python >=${{ python_min }}
+    - python-dateutil >=2.7.5,<3
+    - tenacity >=9
+    - tornado >=5.0,<7
+    - python-daemon <2.2.0
+    - typing_extensions >=4.12.2
+
+tests:
+  - python:
+      imports:
+        - luigi
+      pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
+  - requirements:
+      run:
+        - pip
+        - python ${{ python_min }}.*
+    script:
+      - luigi --help
+      - luigid --help
+      - luigi-grep --help
+      - luigi-deps --help
+      - luigi-deps-tree --help
+
+about:
+  summary: Workflow mgmgt + task scheduling + dependency resolution.
+  license: Apache-2.0
+  license_file: LICENSE
+  homepage: https://github.com/spotify/luigi
+
+extra:
+  recipe-maintainers:
+    - ocefpaf
+    - kwilcox
