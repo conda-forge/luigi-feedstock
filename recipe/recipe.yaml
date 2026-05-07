@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "3.8.0"
+  version: 3.8.1
 
 package:
   name: luigi
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/l/luigi/luigi-${{ version }}.tar.gz
-  sha256: e77c37e7d8ed0b85d5da2daeae3b3f0e89c03993ff28698795f17634f1d5ac75
+  sha256: 2fa5eb5d3474e495de09bd964f502936c08f8b1eb6e0f3ca3c8a69116c38d0c3
 
 build:
   number: 0
@@ -34,9 +34,8 @@ requirements:
     - python-dateutil >=2.7.5,<3
     - tenacity >=9
     - tornado >=5.0,<7
-    - python-daemon <2.2.0
+    - python-daemon
     - typing_extensions >=4.12.2
-
 tests:
   - python:
       imports:
@@ -44,7 +43,7 @@ tests:
       pip_check: true
       python_version:
         - ${{ python_min }}.*
-        - "*"
+        - '*'
   - requirements:
       run:
         - pip
